@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANPR System - Real-time Monitoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 Automatic Number Plate Recognition System</h1>
+            <p class="subtitle">Real-time Vehicle and License Plate Detection</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Video Stream -->
+            <div class="video-section">
+                <h2>Live Video Feed</h2>
+                <div class="video-container">
+                    <img id="video-stream" src="{{ url_for('video_feed') }}" alt="Video Stream">
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-section">
+                <h2>Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Detections</h3>
+                        <p id="total-detections" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Unique Plates</h3>
+                        <p id="unique-plates" class="stat-value">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Detections -->
+            <div class="detections-section">
+                <h2>Recent Detections</h2>
+                <div id="detections-list" class="detections-list">
+                    <!-- Detections will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
