@@ -93,7 +93,7 @@ sudo apt-get install tesseract-ocr
 #### 3. Clone the Repository
 Open Command Prompt or PowerShell:
 ```cmd
-git clone https://github.com/UshasriMavuri/vehicleDetection.git
+git clone https://github.com/y22cd1/ANPR.git
 cd vehicleDetection
 ```
 
@@ -525,3 +525,4 @@ For questions and support, please open an issue on GitHub.
 - [ ] Advanced analytics dashboard
 - [ ] Vehicle make/model recognition
 - [ ] Speed estimation
+
